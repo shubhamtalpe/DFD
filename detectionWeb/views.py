@@ -9,3 +9,9 @@ def home(request):
 def predict(request):
     if 'file_name' not in request.session:
         return redirect('/')
+
+def mission(request):
+    return render(request, 'mission.html')
+
+def aboutus(request):
+    return render(request, 'aboutus.html')
