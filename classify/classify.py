@@ -29,7 +29,4 @@ class classify():
 
         dataset = classification_dataset(video_path, sequence_length = 60, transform = self.transform, crop_face = crop_face)
         pred = classification_helpers.predict(self.model, dataset[0])
-        print('\n\n-----------------------------')
-        print(pred)
-        print('-----------------------------')
         return pred
