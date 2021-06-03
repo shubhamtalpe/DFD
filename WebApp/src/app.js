@@ -54,7 +54,7 @@ app.post('/upload', (req,res) => {
         else
         {
             console.log(req.file)
-            const output = spawn('python3', ['/home/soham/DFD/DFD/classify/driver.py','/home/soham/DFD/DFD/WebApp/src/' + req.file.path])
+            const output = spawn('python3', ['/home/soham/DFD/DFD/classify/driver.py','/home/soham/DFD/DFD/WebApp/src' + req.file.path])
             output.stdout.on('data', data => {
                 res.render('index',{
                     ERROR : data.toString()
