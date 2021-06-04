@@ -9,9 +9,13 @@ clf = classify('/home/soham/Downloads/checkpoint_80.pt')
 
 
 #print(sys.argv[1])
-prediction = clf.get_prediction(sys.argv[1], True)
-print(prediction[0])
-if prediction[0] == 'REAL':
-    print(math.ceil(100-prediction[1]))
-else:
-    print(math.ceil(prediction[1]))
+try:
+    prediction = clf.get_prediction(sys.argv[1], True)
+    print(prediction[0])
+    if prediction[0] == 'REAL':
+        print(math.ceil(100-prediction[1]))
+    else:
+        print(math.ceil(prediction[1]))
+except:
+    print("No Faces Found")
+    print(0)
