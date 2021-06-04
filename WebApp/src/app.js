@@ -73,7 +73,7 @@ app.post('/upload', (req,res) => {
     
             if(req.file != undefined)
             {
-                const output = spawn('python3', ['/home/soham/DFD/DFD/classify/driver.py','./' + paths])
+                const output = spawn('python3', ['../../classify/driver.py','./' + paths])
                 output.stdout.on('data', data => {
                     getVideoDurationInSeconds(paths).then((duration) => {
                         var temp = data.toString('UTF8')
