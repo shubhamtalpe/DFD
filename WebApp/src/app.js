@@ -48,7 +48,7 @@ app.get('/Scan',(req,res) => {
 })
 
 app.get('/about', (req,res) => {
-    res.render('about',{
+    res.render('about_us',{
         title : 'About',
         name : 'Nahi Degi Mitra Mandal'
     })
@@ -122,9 +122,9 @@ app.post('/upload', (req,res) => {
     })      
 })
 
-app.get('/help', (req,res) => {
-    res.render('help', {
-        title : 'Help',
+app.get('/contactus', (req,res) => {
+    res.render('contact_us', {
+        title : 'Contact Us',
         name : 'Nahi Degi Mitra Mandal'
     })
 })
